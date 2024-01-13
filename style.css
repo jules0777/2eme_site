@@ -1,0 +1,129 @@
+
+*{
+    font-family: 'JetBrains Mono', monospace;
+    cursor: none;
+}
+.curseur-customisation{
+    position: fixed;
+    top: 50%;/* le curseur commence au milieu de la page*/
+    left: 50%;
+    transform:translate(-50%,-50%);
+    height: 30px;/*taille du rond*/
+    width: 30px;
+    border:2px solid #fff;
+    border-radius: 50%;/* 50% pour que le rond soit parfait*/
+    background-color:transparent;
+    z-index: 99999  ;/*le curseur est le plus important , il est au premier plan*/
+    pointer-events: none;
+
+}
+
+.body1{
+    background-image: url("image/fondpage1test.png");
+    background-size: cover; /*elle couvre tout*/
+    background-position: center;  /*elle est au centre*/
+    background-attachment: fixed;/*elle reste fixe*/
+    height: 100vh;
+}
+.bienvenue{
+    font-size:  600%;
+    color:rgb(11, 170, 0);
+    position: absolute;
+    top: 39.5%;
+    left: 18.5%;
+    text-shadow:5px 5px 10px rgb(7, 111, 0);
+} 
+.bienvenue a {
+    text-decoration: none; /* Retire le soulignement */
+    color: inherit; /* Utilise la couleur héritée du parent (ici, rgb(11, 170, 0)) */
+}
+.bienvenue .letter {
+    opacity: 0;
+    display: inline-block;
+}
+
+.bienvenue .letter1 { animation: apparitionLettre1 1s forwards; }
+.bienvenue .letter2 { animation: apparitionLettre2 2.5s forwards; }
+.bienvenue .letter3 { animation: apparitionLettre3 2.6s forwards; }
+.bienvenue .letter4 { animation: apparitionLettre4 3.4s forwards; }
+.bienvenue .letter5 { animation: apparitionLettre5 4.2s forwards; }
+.bienvenue .letter6 { animation: apparitionLettre6 5s forwards; }
+.bienvenue .letter7 { animation: apparitionLettre7 5.8s forwards; }
+.bienvenue .letter8 { animation: apparitionLettre8 10s forwards; }
+.bienvenue .letter9 { animation: apparitionLettre9 18s forwards; }
+
+@keyframes apparitionLettre1 { to { opacity: 1; } }
+@keyframes apparitionLettre2 { to { opacity: 1; } }
+@keyframes apparitionLettre3 { to { opacity: 1; } }
+@keyframes apparitionLettre4 { to { opacity: 1; } }
+@keyframes apparitionLettre5 { to { opacity: 1; } }
+@keyframes apparitionLettre6 { to { opacity: 1; } }
+@keyframes apparitionLettre7 { to { opacity: 1; } }
+@keyframes apparitionLettre8 { to { opacity: 1; } }
+@keyframes apparitionLettre9 { to { opacity: 1; } }
+
+
+.barre{
+    color: rgb(10, 147, 0);
+    font-size:  600%;
+    position: absolute;
+    top: 39.5%;
+    left: 87%;
+    animation: cachecache 1.5s  infinite ;
+    
+}
+
+.point_i{
+    position: absolute;
+    top: 34.5%;
+    left: 26%;
+    border-radius: 50%;
+    border: 5px solid rgb(11, 170, 0);
+    height: 10%;
+    width: 5%;
+    background-color: rgb(11, 170, 0);
+}
+.curseur-customisation_sur_point_i{
+    visibility: hidden;
+    transition: 1s;
+}
+.fleche1{
+    height:10%;
+    width: 5%;
+    position: absolute;
+    top:30% ;
+    left: 20%;
+    transform: rotate(75deg);
+    animation: cachecache 1.5s  infinite ;
+}
+.fleche2{
+    height:10%; 
+    width: 5%;
+    position: absolute;
+    top:27% ;
+    left: 30%;
+    transform: rotate(200deg);
+    animation: cachecache 1.5s  infinite ;
+}
+@keyframes cachecache {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    25% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    50% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    75% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}

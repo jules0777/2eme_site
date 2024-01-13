@@ -1,0 +1,94 @@
+
+*{
+    font-family: 'JetBrains Mono', monospace;
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.curseur-customisation{
+    position: fixed;
+    top: 50%;/* le curseur commence au milieu de la page*/
+    left: 50%;
+    transform:translate(-50%,-50%);
+    height: 30px;/*taille du rond*/
+    width: 30px;
+    border:2px solid #fff;
+    border-radius: 50%;/* 50% pour que le rond soit parfait*/
+    background-color:transparent;
+    z-index: 99999  ;/*le curseur est le plus important , il est au premier plan*/
+    pointer-events: none;
+
+}
+
+  .body2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000000;
+ 
+  }
+  ul {
+    position: relative;
+  }
+  ul li {
+    list-style: none;
+    text-align: center;
+  }
+  ul li a {
+    color:rgb(11, 170, 0);;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  ul:hover li a {
+    color:rgb(11, 170, 0);;
+  }
+  ul li:hover a {
+    color:rgb(7, 100, 0);;
+    background: transparent;
+  }
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+  }
+  ul li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+  }
+  ul li:nth-child(6n + 1) a:before {
+    background: #002351;
+  }
+  ul li:nth-child(6n + 2) a:before {
+    background: #4e0000;
+  }
+  ul li:nth-child(6n + 3) a:before {
+    background: #0f2237;
+  }
+  ul li:nth-child(6n + 4) a:before {
+    background: #212037;
+  }
